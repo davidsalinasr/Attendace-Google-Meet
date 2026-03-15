@@ -3,7 +3,7 @@
  * Set your YouTube video ID below; leave empty to show placeholder until you have a video.
  */
 const CHROME_STORE_URL = '#'; // Replace with your Chrome Web Store link when published
-const YOUTUBE_VIDEO_ID = '0xj58jRAWsI';  // https://www.youtube.com/watch?v=0xj58jRAWsI
+const YOUTUBE_VIDEO_ID = 'VHrd3JvWABQ';  // https://www.youtube.com/watch?v=VHrd3JvWABQ
 
 (function () {
   const modal = document.getElementById('video-modal');
