@@ -1,0 +1,6 @@
+{
+  "name": "attendace-google-meet",
+  "version": "1.0.0",
+  "description": "Track attendance and engagement in Google Meet. Chrome extension with landing page.",
+  "private": true
+}
