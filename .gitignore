@@ -1,0 +1,19 @@
+# Local gh CLI (optional, add to PATH to use)
+.bin/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.cursor/
+*.log
+.env
+.env.*
+
+# Build / output (if added later)
+dist/
+build/

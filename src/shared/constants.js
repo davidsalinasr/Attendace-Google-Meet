@@ -1,0 +1,22 @@
+export const MESSAGES = {
+  GET_STATE: 'GET_STATE',
+  START_TRACKING: 'START_TRACKING',
+  STOP_TRACKING: 'STOP_TRACKING',
+  IN_CALL_DETECTED: 'IN_CALL_DETECTED',
+  CALL_LEFT: 'CALL_LEFT',
+  DISMISS_REMINDER: 'DISMISS_REMINDER',
+  ENGAGEMENT_EVENT: 'ENGAGEMENT_EVENT',
+};
+
+export const TRACKING_STATE = {
+  IDLE: 'idle',
+  TRACKING: 'tracking',
+  STOPPED: 'stopped',
+};
+
+export const REMINDER_DELAY_MS = 5 * 60 * 1000; // 5 minutes
+
+export const STORAGE_KEYS = {
+  SESSIONS: 'sessions',
+  CURRENT_SESSION: 'currentSession',
+};

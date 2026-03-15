@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Meet Attendance Tracker</title>
+  <style>
+    :root {
+      --text: #1a1a2e;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --bg: #fafafa;
+      --card: #fff;
+      --border: #e5e7eb;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px 40px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .effective {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 28px 0 8px;
+      color: var(--text);
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: #d1fae5;
+      color: #065f46;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 28px 20px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="effective">Meet Attendance Tracker &middot; Effective March 15, 2026</p>
+    <span class="badge">All data stays in your browser</span>
+
+    <h2>Overview</h2>
+    <p>Meet Attendance Tracker is a Chrome extension that helps Google Meet hosts track attendance and engagement during video calls. We are committed to protecting your privacy and being transparent about how data is handled.</p>
+
+    <h2>Data We Collect</h2>
+    <p>The extension collects the following information <strong>only while tracking is actively enabled by the host</strong>:</p>
+    <ul>
+      <li><strong>Attendance data:</strong> Participant names, join/leave times, and session duration.</li>
+      <li><strong>Engagement data:</strong> Microphone unmute events (when participants speak) and emoji reactions.</li>
+      <li><strong>Chat messages:</strong> Messages sent in the Google Meet chat panel during tracked sessions.</li>
+      <li><strong>Meeting metadata:</strong> Meeting title, meeting code, start/end timestamps.</li>
+    </ul>
+
+    <h2>How Data Is Stored</h2>
+    <p>All data is stored <strong>locally in your browser</strong> using Chrome's built-in storage API (<code>chrome.storage.local</code>). No data is transmitted to, processed by, or stored on any external server, cloud service, or third-party system.</p>
+
+    <h2>Google API Usage</h2>
+    <p>The extension may use the Google Meet REST API to retrieve attendance information (join/leave times). This requires you to sign in with your Google account via OAuth 2.0. The extension requests only the <code>meetings.space.readonly</code> scope, which provides read-only access to meeting attendance records. Your Google credentials are handled entirely by Chrome's built-in identity system and are never accessed or stored by the extension.</p>
+
+    <h2>What We Do NOT Do</h2>
+    <ul>
+      <li>We do <strong>not</strong> sell, share, or transmit your data to any third party.</li>
+      <li>We do <strong>not</strong> track your browsing activity outside of Google Meet.</li>
+      <li>We do <strong>not</strong> collect data when tracking is not actively enabled.</li>
+      <li>We do <strong>not</strong> access other participants' browsers, devices, or accounts.</li>
+      <li>We do <strong>not</strong> use analytics, advertising, or telemetry services.</li>
+      <li>We do <strong>not</strong> store or process audio, video, or screen content.</li>
+    </ul>
+
+    <h2>Permissions Explained</h2>
+    <ul>
+      <li><strong>storage:</strong> Save session data locally in your browser.</li>
+      <li><strong>activeTab / tabs:</strong> Detect when you are on a Google Meet page and inject the tracking UI.</li>
+      <li><strong>identity:</strong> Authenticate with Google to access Meet attendance records via the API.</li>
+      <li><strong>Host permission (meet.google.com):</strong> Operate only on Google Meet pages — no other websites.</li>
+    </ul>
+
+    <h2>Your Control</h2>
+    <ul>
+      <li>You choose when to start and stop tracking — nothing is automatic.</li>
+      <li>You can archive or delete individual sessions from the dashboard at any time.</li>
+      <li>Removing the extension deletes all locally stored data permanently.</li>
+    </ul>
+
+    <h2>Children's Privacy</h2>
+    <p>This extension is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we update this privacy policy, the revised version will be included in the extension update and the effective date above will change.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, please contact us at: <a href="mailto:david@salinas.com">david@salinas.com</a></p>
+  </div>
+</body>
+</html>

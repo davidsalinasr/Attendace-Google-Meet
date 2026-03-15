@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Attendance Tracker — One-click attendance for Google Meet</title>
+  <meta name="description" content="Track who attended, who spoke, and in-call chat. Dashboard, export, and 100% private — all data stays in your browser.">
+  <link rel="icon" type="image/png" href="assets/icon48.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="viewport">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/icon48.png" alt="Meet Attendance" width="32" height="32">
+        <span>Meet Attendance</span>
+      </div>
+      <a href="#" class="header-cta" id="header-cta" data-cta>Add to Chrome</a>
+    </header>
+
+    <main class="hero">
+      <div class="hero-content">
+        <h1 class="headline">
+          Who was there. Who <span class="highlight">spoke</span>. What was said.
+        </h1>
+        <p class="subhead">
+          One-click tracking • Dashboard & export • 100% private & local
+        </p>
+        <p class="tagline">
+          Track attendance and engagement in Google Meet. All data stays in your browser — no account, no server.
+        </p>
+        <div class="ctas">
+          <a href="#" class="btn btn-primary" id="cta-primary" data-cta>
+            <svg class="chrome-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            Add to Chrome — It's Free!
+          </a>
+          <button type="button" class="btn btn-secondary" id="cta-video" aria-haspopup="dialog" aria-expanded="false" aria-controls="video-modal">
+            <svg class="play-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M8 5v14l11-7z"/>
+            </svg>
+            Watch how it works
+          </button>
+        </div>
+        <p class="social-proof">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>Chrome Web Store</span>
+        </p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="browser-mock browser-mock-safari">
+          <div class="browser-mock-titlebar">
+            <div class="browser-mock-traffic">
+              <span class="browser-mock-dot close"></span>
+              <span class="browser-mock-dot min"></span>
+              <span class="browser-mock-dot max"></span>
+            </div>
+            <div class="browser-mock-address">meet.google.com</div>
+          </div>
+          <div class="browser-mock-content">
+            <div class="mockup-dashboard" role="img" aria-label="Meet Attendance dashboard showing session details, attendance, and insights">
+              <a class="mockup-back-link">← All Sessions</a>
+              <div class="mockup-header">
+                <div class="mockup-header-left">
+                  <div class="mockup-title-row">
+                    <h2 class="mockup-session-title">Data tracked test</h2>
+                  </div>
+                  <p class="mockup-subtitle">Sunday, March 15, 2026 at 07:25 PM</p>
+                </div>
+                <div class="mockup-header-right">
+                  <button type="button" class="mockup-btn mockup-btn-primary">Export CSV</button>
+                </div>
+              </div>
+              <div class="mockup-metrics-row">
+                <div class="mockup-metric-card"><div class="mockup-metric-value">1</div><div class="mockup-metric-label">Attended</div></div>
+                <div class="mockup-metric-card"><div class="mockup-metric-value">1</div><div class="mockup-metric-label">Total Participants</div></div>
+                <div class="mockup-metric-card"><div class="mockup-metric-value">1m</div><div class="mockup-metric-label">Call Duration</div></div>
+                <div class="mockup-metric-card"><div class="mockup-metric-value">2</div><div class="mockup-metric-label">Spoke</div></div>
+                <div class="mockup-metric-card"><div class="mockup-metric-value">10</div><div class="mockup-metric-label">Reactions</div></div>
+                <div class="mockup-metric-card"><div class="mockup-metric-value">3</div><div class="mockup-metric-label">Chat Messages</div></div>
+              </div>
+              <div class="mockup-reaction-breakdown">
+                <span class="mockup-reaction-label">Reactions:</span>
+                <span class="mockup-emoji-stat">👎 <span class="mockup-emoji-pct">20%</span></span>
+                <span class="mockup-emoji-stat">❤️ <span class="mockup-emoji-pct">10%</span></span>
+                <span class="mockup-emoji-stat">🎉 <span class="mockup-emoji-pct">10%</span></span>
+                <span class="mockup-emoji-stat">👍 <span class="mockup-emoji-pct">10%</span></span>
+                <span class="mockup-emoji-stat">👏 <span class="mockup-emoji-pct">10%</span></span>
+              </div>
+              <div class="mockup-controls-row">
+                <div class="mockup-filter-group">
+                  <button type="button" class="mockup-filter-btn active">All</button>
+                  <button type="button" class="mockup-filter-btn">Attended</button>
+                  <button type="button" class="mockup-filter-btn">Left early</button>
+                  <button type="button" class="mockup-filter-btn">No show</button>
+                </div>
+                <select class="mockup-sort-select" aria-label="Sort"><option>Sort by Join Time</option></select>
+              </div>
+              <table class="mockup-participants-table">
+                <thead>
+                  <tr>
+                    <th>Participant</th>
+                    <th>Status</th>
+                    <th>Join Time</th>
+                    <th>Leave Time</th>
+                    <th>Duration</th>
+                    <th>Joins</th>
+                    <th>Engagement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="mockup-name-cell"><span class="mockup-avatar">DS</span> David Salinas <span class="mockup-role-badge">Host</span></div></td>
+                    <td><span class="mockup-status-pill mockup-status-attended">Attended</span></td>
+                    <td>07:25 PM</td>
+                    <td>07:26 PM</td>
+                    <td>0m</td>
+                    <td>1</td>
+                    <td><span class="mockup-engagement-pill mockup-eng-spoke">Spoke</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="mockup-insights">
+                <div class="mockup-insights-head"><h3>Insights</h3><button type="button" class="mockup-btn mockup-btn-secondary">Export Chat</button></div>
+                <div class="mockup-insights-grid">
+                  <div class="mockup-insight-card"><h4>Questions Asked</h4><p>No questions detected.</p></div>
+                  <div class="mockup-insight-card"><h4>Most Chatted Topics</h4><p><span class="mockup-tag">mensaje 1</span> <span class="mockup-tag">messages 1</span> <span class="mockup-tag">tres 1</span></p></div>
+                </div>
+                <div class="mockup-insight-card mockup-insight-full"><h4>Most Active Participants</h4><p>1. David Salinas — 3 chats, 2 spoke, 10 reactions</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading" class="testimonials-heading">What people say</h2>
+    <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+          <article class="testimonial-card" data-index="0">
+            <span class="testimonial-stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              An amazing software that helps you take attendance at a spot, time in and out and also calculates the hours spent in the call. Super amazing tool
+            </blockquote>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">David Miller</span>
+              <span class="testimonial-badge">Verified User</span>
+              <span class="testimonial-role">Chrome Web Store</span>
+            </footer>
+          </article>
+          <article class="testimonial-card" data-index="1">
+            <span class="testimonial-stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              This extension is really helpful in tracking Google Meet attendance. I specifically like how it works with Microsoft Edge browser. I'm able to retrieve complete attendance list, regardless of when I switched to web from mobile. Unlike on Chrome browser on which I have to track manually.
+            </blockquote>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">Michael Thompson</span>
+              <span class="testimonial-role">Remote Team Lead</span>
+            </footer>
+          </article>
+          <article class="testimonial-card" data-index="2">
+            <span class="testimonial-stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              The agent helped me a lot — excellent customer service. Thank you so much.
+            </blockquote>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">Sarah Jenkins</span>
+              <span class="testimonial-role">Education Coordinator</span>
+            </footer>
+          </article>
+          <article class="testimonial-card" data-index="3">
+            <span class="testimonial-stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="testimonial-quote">Thank you!</blockquote>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">Amanda Wright</span>
+              <span class="testimonial-role">Community Member</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Testimonial slides"></div>
+        <button type="button" class="carousel-btn carousel-next" id="carousel-next" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+    </div>
+    </section>
+  </div>
+
+  <!-- Video modal: overlay, not in scroll -->
+  <div id="video-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title">How it works</h2>
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close video">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="modal-video-wrap">
+        <iframe id="video-iframe" src="" title="How Meet Attendance Tracker works" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="video-placeholder" class="video-placeholder" aria-hidden="true">
+          <p>Add your YouTube video ID in <code>landing/script.js</code> (<code>YOUTUBE_VIDEO_ID</code>).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

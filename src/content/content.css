@@ -1,0 +1,154 @@
+/* ===== Injected UI in Google Meet ===== */
+
+/* --- Tracking indicator (top-left label) --- */
+#mat-tracking-indicator {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#mat-tracking-indicator.tracking {
+  background: rgba(5, 150, 105, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+#mat-tracking-indicator.not-tracking {
+  background: rgba(107, 114, 128, 0.12);
+  border: 1px solid rgba(107, 114, 128, 0.2);
+  color: #9ca3af;
+}
+
+#mat-tracking-indicator .mat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#mat-tracking-indicator.tracking .mat-dot {
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+  animation: mat-pulse 2s infinite;
+}
+
+#mat-tracking-indicator.not-tracking .mat-dot {
+  background: #6b7280;
+}
+
+@keyframes mat-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* --- Start/Stop button next to hang-up --- */
+#mat-control-btn {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  gap: 5px;
+  height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+#mat-control-btn.start {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+#mat-control-btn.start:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+#mat-control-btn.stop {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+#mat-control-btn.stop:hover {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fecaca;
+}
+
+#mat-control-btn .mat-btn-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#mat-control-btn.start .mat-btn-dot {
+  background: #10b981;
+}
+
+#mat-control-btn.stop .mat-btn-dot {
+  background: #ef4444;
+  animation: mat-pulse 1.5s infinite;
+}
+
+/* --- 5-min reminder tooltip (in Meet page) --- */
+#mat-reminder-tooltip {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 10px 36px 10px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #92400e;
+  line-height: 1.4;
+  max-width: 340px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: mat-slide-up 0.3s ease;
+}
+
+#mat-reminder-tooltip .mat-reminder-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #92400e;
+  cursor: pointer;
+  line-height: 1;
+}
+#mat-reminder-tooltip .mat-reminder-close:hover {
+  color: #78350f;
+}
+
+@keyframes mat-slide-up {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

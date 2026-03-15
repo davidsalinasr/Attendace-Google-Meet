@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=320">
+  <link rel="stylesheet" href="popup.css">
+  <title>Meet Attendance</title>
+</head>
+<body>
+  <!-- Not on Meet -->
+  <div id="not-meet" class="screen hidden">
+    <div class="logo-area">
+      <div class="logo-icon">📋</div>
+      <h1>Meet Attendance</h1>
+    </div>
+    <p class="subtitle">Open a Google Meet call to start tracking attendance.</p>
+    <button id="btn-open-dashboard" class="btn btn-secondary btn-full">View Past Sessions</button>
+  </div>
+
+  <!-- On Meet — idle (not tracking yet) -->
+  <div id="meet-idle" class="screen hidden">
+    <div class="header-row">
+      <span class="meeting-code" id="meeting-code"></span>
+      <span class="status-pill status-idle">Not tracking</span>
+    </div>
+
+    <!-- 5-min reminder tooltip -->
+    <div id="reminder-tooltip" class="reminder-tooltip hidden">
+      <button id="reminder-close" class="reminder-close" aria-label="Dismiss">&times;</button>
+      <p>You've been in this call for 5 minutes.<br>Start attendance to track who joined and engagement.</p>
+    </div>
+
+    <button id="btn-start" class="btn btn-primary btn-full">
+      <span class="btn-icon">●</span> Start Attendance
+    </button>
+    <button id="btn-dashboard-idle" class="btn btn-ghost btn-full">View Past Sessions</button>
+  </div>
+
+  <!-- On Meet — tracking active -->
+  <div id="meet-tracking" class="screen hidden">
+    <div class="header-row">
+      <span class="meeting-code" id="meeting-code-tracking"></span>
+      <span class="status-pill status-tracking">● Tracking</span>
+    </div>
+
+    <!-- Toast area -->
+    <div id="toast" class="toast hidden">
+      <span id="toast-text">Attendance tracking started</span>
+      <button id="toast-close" class="toast-close" aria-label="Dismiss">&times;</button>
+    </div>
+
+    <div class="tracking-info">
+      <p class="tracking-detail">Recording attendance and engagement...</p>
+    </div>
+
+    <button id="btn-stop" class="btn btn-danger btn-full">Stop Tracking</button>
+  </div>
+
+  <!-- On Meet — tracking stopped -->
+  <div id="meet-stopped" class="screen hidden">
+    <div class="header-row">
+      <span class="meeting-code" id="meeting-code-stopped"></span>
+      <span class="status-pill status-stopped">Tracking ended</span>
+    </div>
+    <p class="subtitle">Session recorded successfully.</p>
+    <button id="btn-view-summary" class="btn btn-primary btn-full">View Summary</button>
+    <button id="btn-restart" class="btn btn-secondary btn-full">Start New Tracking</button>
+  </div>
+
+  <!-- Privacy link (all screens) -->
+  <div style="text-align:center; padding: 8px 16px 12px;">
+    <a href="privacy.html" target="_blank" style="font-size:11px; color:#9ca3af; text-decoration:none;">How we handle your data</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
